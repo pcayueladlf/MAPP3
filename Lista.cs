@@ -67,20 +67,6 @@ namespace Listas
             return -1;
         }
 
-        public void InsertUlt(int e)
-        {
-            if (pri == null)
-            {
-                pri = new Nodo(e);
-            }
-            else
-            {
-                Nodo aux = pri;
-                while(aux.sig != null)
-                    aux = aux.sig;
-                aux.sig = new Nodo(e);
-            }
-        }
 
         public bool BorraPrimElto(int e)
         {
@@ -184,19 +170,7 @@ namespace Listas
             return BorraPrimElto(e);
         }
 
-        public void BorraTodos(int e)
-        {
-            while (pri != null && pri.dato == e)
-                pri = pri.sig;
 
-            Nodo aux = pri;
-            while(aux != null && aux.sig != null)
-            {
-                if (aux.sig.dato == e)
-                    aux.sig = aux.sig.sig;
-                else aux = aux.sig;
-            }
-        }
 
         public void BorraNesimo(int n)
         {
